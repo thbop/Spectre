@@ -11,5 +11,12 @@ config_version=5
 [application]
 
 config/name="Spectre"
+run/main_scene="res://Assets/Scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+textures/decals/filter=0
+textures/light_projectors/filter=0
