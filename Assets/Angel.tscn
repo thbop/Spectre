@@ -1,9 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://gf7xw0uk4tfo"]
+[gd_scene load_steps=12 format=3 uid="uid://gf7xw0uk4tfo"]
 
 [ext_resource type="Texture2D" uid="uid://csty3twiu1tfp" path="res://Assets/Graphics/Angel/sprites.png" id="1_718wx"]
 [ext_resource type="Script" path="res://Assets/Scripts/Angel/Angel.gd" id="1_hnirh"]
+[ext_resource type="Shader" path="res://Assets/Scripts/Angel/Angel.gdshader" id="2_kptju"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_goaxw"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_jrspu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h118w"]
+shader = ExtResource("2_kptju")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gavud"]
 atlas = ExtResource("1_718wx")
@@ -53,10 +57,10 @@ collision_layer = 2
 script = ExtResource("1_hnirh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4.88461)
-shape = SubResource("CapsuleShape2D_goaxw")
+shape = SubResource("CircleShape2D_jrspu")
 
 [node name="Animator" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_h118w")
 position = Vector2(1.19209e-07, 5)
 scale = Vector2(2.66667, 2.66667)
 sprite_frames = SubResource("SpriteFrames_m5rxi")
