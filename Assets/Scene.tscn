@@ -57,6 +57,12 @@ scale = Vector2(3.60556, 3.60556)
 texture = ExtResource("5_5pj34")
 centered = false
 
-[node name="LayerDeco" parent="ParallaxBackground" instance=ExtResource("5_fdum5")]
+[node name="tree" parent="ParallaxBackground" instance=ExtResource("5_fdum5")]
 position = Vector2(356, 280)
 metadata/DecoName = "tree2"
+
+[node name="tree2" parent="ParallaxBackground" instance=ExtResource("5_fdum5")]
+position = Vector2(1285, 286)
+
+[node name="LayerDeco" parent="ParallaxBackground" instance=ExtResource("5_fdum5")]
+position = Vector2(17, 233)

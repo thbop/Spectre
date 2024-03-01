@@ -6,5 +6,6 @@
 scale = Vector2(4.26878, 4.26878)
 motion_scale = Vector2(0.6, 0.6)
 script = ExtResource("1_y4gbi")
+metadata/DecoName = "tree"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
