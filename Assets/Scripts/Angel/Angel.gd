@@ -1,4 +1,6 @@
 extends CharacterBody2D
+@onready var Animator = $Animator
+
 
 const SPEED: int = 100
 
@@ -13,5 +15,6 @@ func _physics_process(delta: float) -> void:
 	velocity = toMouse * SPEED * log( toMouseDis )
 	
 	rotation = ( toMouseRot + 1.57075 )
-
+	
+	Animator.play()
 	move_and_slide()

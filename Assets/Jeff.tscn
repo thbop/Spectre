@@ -121,7 +121,7 @@ script = ExtResource("1_0q5bj")
 position = Vector2(0, 1.33333)
 shape = SubResource("CapsuleShape2D_mbkf4")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Animator" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.666667, 0.333333)
 scale = Vector2(1.75, 1.75)
 sprite_frames = SubResource("SpriteFrames_cydn7")
