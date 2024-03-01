@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://chwl3c0gbx2r1"]
+[gd_scene load_steps=9 format=3 uid="uid://chwl3c0gbx2r1"]
 
 [ext_resource type="PackedScene" uid="uid://b64x3dtmmywch" path="res://Assets/Jeff.tscn" id="1_3236o"]
 [ext_resource type="PackedScene" uid="uid://gf7xw0uk4tfo" path="res://Assets/Angel.tscn" id="3_38mhs"]
 [ext_resource type="Texture2D" uid="uid://bardtsqsvwb4j" path="res://Assets/Graphics/Tiles/tiles.png" id="3_f0ltp"]
 [ext_resource type="Script" path="res://Assets/Scripts/Camera2D.gd" id="4_i6t0c"]
+[ext_resource type="Texture2D" uid="uid://dgeq5sqyamdbe" path="res://Assets/Graphics/Sketches/sky.png" id="5_5pj34"]
+[ext_resource type="Texture2D" uid="uid://cf2cswk3n2qmp" path="res://Assets/Graphics/Decos/tree.png" id="6_r8dor"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q272p"]
 texture = ExtResource("3_f0ltp")
@@ -12,6 +14,9 @@ texture_region_size = Vector2i(10, 10)
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -5, 5, -5, 5, 5, -5, 5)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_4mull"]
 tile_size = Vector2i(10, 10)
@@ -21,18 +26,41 @@ sources/0 = SubResource("TileSetAtlasSource_q272p")
 [node name="Scene" type="Node2D"]
 
 [node name="Jeff" parent="." instance=ExtResource("1_3236o")]
+position = Vector2(296, 488)
+scale = Vector2(2.65084, 2.65084)
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(5, 5)
 tile_set = SubResource("TileSet_4mull")
 format = 2
-layer_0/tile_data = PackedInt32Array(655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 720899, 0, 0, 720900, 0, 0, 720901, 0, 0, 720902, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 0, 720906, 0, 0, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 0, 720914, 0, 0, 720915, 0, 0, 720916, 0, 0, 720917, 0, 0, 720918, 0, 0)
+layer_0/tile_data = PackedInt32Array(655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 720899, 0, 0, 720900, 0, 0, 720901, 0, 0, 720902, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 0, 720906, 0, 0, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 0, 720914, 0, 0, 720915, 0, 0, 720916, 0, 0, 720917, 0, 0, 720918, 0, 0, 720919, 0, 0, 720920, 0, 0, 720921, 0, 0, 720922, 0, 0, 720923, 0, 0, 720924, 0, 0, 720925, 0, 0, 720926, 0, 0, 720927, 0, 0, 720928, 0, 0, 720929, 0, 0, 720930, 0, 0, 720931, 0, 0, 720932, 0, 0, 720933, 0, 0, 720934, 0, 0, 720935, 0, 0, 720896, 0, 1, 720897, 0, 1, 720898, 0, 1, 786434, 0, 1, 786433, 0, 1, 786432, 0, 1, 786435, 0, 1, 786436, 0, 1, 786437, 0, 1, 786438, 0, 1, 786439, 0, 1, 786440, 0, 1, 786441, 0, 1, 786442, 0, 1, 786443, 0, 1, 786444, 0, 1, 786445, 0, 1, 786446, 0, 1, 786447, 0, 1, 786448, 0, 1, 786449, 0, 1, 786450, 0, 1, 786451, 0, 1, 786452, 0, 1, 786453, 0, 1, 786454, 0, 1, 786455, 0, 1, 786456, 0, 1, 786457, 0, 1, 786458, 0, 1, 786459, 0, 1, 786460, 0, 1, 786461, 0, 1, 786462, 0, 1, 786463, 0, 1, 786464, 0, 1, 786465, 0, 1, 786466, 0, 1, 786467, 0, 1, 786468, 0, 1, 786469, 0, 1, 786470, 0, 1, 786471, 0, 1)
 
 [node name="Angel" parent="." instance=ExtResource("3_38mhs")]
 position = Vector2(579, 324)
 scale = Vector2(1.72825, 1.75908)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(584, 342)
+position = Vector2(565, 324)
 limit_left = 0
+limit_top = 0
+limit_right = 2000
+limit_bottom = 648
 script = ExtResource("4_i6t0c")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
+scale = Vector2(3.60556, 3.60556)
+texture = ExtResource("5_5pj34")
+centered = false
+
+[node name="TreeTest" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(852, 265)
+scale = Vector2(4.26878, 4.26878)
+motion_scale = Vector2(0.6, 0.6)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/TreeTest"]
+texture = ExtResource("6_r8dor")

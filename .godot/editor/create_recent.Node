@@ -1,3 +1,6 @@
+Sprite2D
+ParallaxLayer
+ParallaxBackground
 AnimatedSprite2D
 ColorRect
 Camera2D
@@ -5,7 +8,6 @@ Node2D
 Path2D
 RigidBody2D
 DampedSpringJoint2D
-Sprite2D
 CollisionShape2D
 CharacterBody2D
 TileMap
