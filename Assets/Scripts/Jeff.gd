@@ -17,9 +17,9 @@ func _physics_process(delta: float) -> void:
 		velocity.y += gravity * delta
 	
 
-	mousePos = get_viewport().get_mouse_position()
+	#mousePos = get_viewport().get_mouse_position()
 	
-	velocity.x = SPEED * sign( mousePos.x - position.x )
+	#velocity.x = SPEED * sign( mousePos.x - position.x )
 	
 	animator.flip_h = sign( velocity.x ) != 1
 	

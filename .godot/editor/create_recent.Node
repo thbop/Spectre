@@ -1,6 +1,9 @@
-TileMap
-AnimatedSprite2D
-Node2D
+Path2D
+RigidBody2D
+DampedSpringJoint2D
 Sprite2D
+AnimatedSprite2D
 CollisionShape2D
 CharacterBody2D
+TileMap
+Node2D

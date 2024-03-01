@@ -1,3 +1,6 @@
-res://README.md
 res://Assets/Scene.tscn
 res://Assets/Scripts/Jeff.gd
+res://Assets/Angel.tscn
+res://Assets/Scripts/Angel.gd
+res://Assets/Jeff.tscn
+res://Assets/Scripts/Angel/Path2D.gd
