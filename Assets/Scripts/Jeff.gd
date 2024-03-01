@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 	
 	var lastCollision: KinematicCollision2D = get_last_slide_collision()
 	if lastCollision:
-		var dirX: int = lastCollision.get_normal().x
+		var dirX: float = lastCollision.get_normal().x
 		if dirX:
 			velocity.x = SPEED * dirX
 	

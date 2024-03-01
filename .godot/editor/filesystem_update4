@@ -2,3 +2,8 @@ res://Assets/Scene.tscn
 res://Assets/Angel.tscn
 res://Assets/Jeff.tscn
 res://Assets/Scripts/Angel/Angel.gdshader
+res://Assets/Decos/Tree.tscn
+res://Assets/Decos/LayerDeco.tscn
+res://Assets/Scripts/Decos/LayerDeco.gd
+res://Assets/Scripts/Jeff.gd
+res://Assets/Scripts/Angel/Angel.gd

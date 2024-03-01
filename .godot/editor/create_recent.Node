@@ -1,5 +1,6 @@
 Sprite2D
 ParallaxLayer
+TileMap
 ParallaxBackground
 AnimatedSprite2D
 ColorRect
@@ -10,4 +11,3 @@ RigidBody2D
 DampedSpringJoint2D
 CollisionShape2D
 CharacterBody2D
-TileMap

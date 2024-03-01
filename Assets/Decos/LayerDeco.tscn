@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b83imlskdrgla"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Decos/LayerDeco.gd" id="1_y4gbi"]
+
+[node name="LayerDeco" type="ParallaxLayer"]
+scale = Vector2(4.26878, 4.26878)
+motion_scale = Vector2(0.6, 0.6)
+script = ExtResource("1_y4gbi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

@@ -4,7 +4,7 @@ extends CharacterBody2D
 const SPEED: int = 100
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var toMouse: Vector2 = ( get_global_mouse_position() - position ).normalized()
 	var toMouseRot: float = atan2( toMouse.y, toMouse.x )
 	var toMouseDis: float = position.distance_to( get_global_mouse_position() )
