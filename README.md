@@ -12,3 +12,6 @@ Acerola Jam 0 submission source
 
 ## My Interpretation
 Player thinks they control the character on screen. In reality they control an angelic ghost who aids the character as it follows its path. Demonic forces interrupt in various ways and the angel ghost must protect the character.
+
+## Todo
+Rework player movement so that it follows a point following the mouse for smooth movement.

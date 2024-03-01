@@ -4,3 +4,8 @@ res://Assets/Angel.tscn
 res://Assets/Scripts/Angel.gd
 res://Assets/Jeff.tscn
 res://Assets/Scripts/Angel/Path2D.gd
+res://Assets/Scripts/Angel/Angel.gd
+res://Assets/Scripts/Angel/FollowPoint.gd
+res://README.md
+res://Assets/Scripts/Camera2D.gd
+res://Assets/Scripts/Scene.gd

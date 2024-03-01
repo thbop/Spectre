@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://chwl3c0gbx2r1"]
+[gd_scene load_steps=7 format=3 uid="uid://chwl3c0gbx2r1"]
 
 [ext_resource type="PackedScene" uid="uid://b64x3dtmmywch" path="res://Assets/Jeff.tscn" id="1_3236o"]
 [ext_resource type="PackedScene" uid="uid://gf7xw0uk4tfo" path="res://Assets/Angel.tscn" id="3_38mhs"]
 [ext_resource type="Texture2D" uid="uid://bardtsqsvwb4j" path="res://Assets/Graphics/Tiles/tiles.png" id="3_f0ltp"]
+[ext_resource type="Script" path="res://Assets/Scripts/Camera2D.gd" id="4_i6t0c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q272p"]
 texture = ExtResource("3_f0ltp")
@@ -28,5 +29,10 @@ format = 2
 layer_0/tile_data = PackedInt32Array(655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 720899, 0, 0, 720900, 0, 0, 720901, 0, 0, 720902, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 0, 720906, 0, 0, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 0, 720914, 0, 0, 720915, 0, 0, 720916, 0, 0, 720917, 0, 0, 720918, 0, 0)
 
 [node name="Angel" parent="." instance=ExtResource("3_38mhs")]
-position = Vector2(423, 366)
+position = Vector2(579, 324)
 scale = Vector2(1.72825, 1.75908)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(584, 342)
+limit_left = 0
+script = ExtResource("4_i6t0c")
