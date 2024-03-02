@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Assets/Scripts/Machines/Rope.gd" id="2_j2f41"]
 
 [node name="Rope" type="Line2D"]
-points = PackedVector2Array(-25, 96, -26, 41, -26, -7, -16, -22, 3, -26, 20, -21, 25, -8, 28, 68)
+points = PackedVector2Array(-1, 1, 103, -92)
 width = 5.0
 texture = ExtResource("1_x1pik")
 joint_mode = 2
@@ -12,4 +12,4 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("2_j2f41")
 metadata/Tension = 10.0
-metadata/Damp = 0.9
+metadata/Damp = 0.6

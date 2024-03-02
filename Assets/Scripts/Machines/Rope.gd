@@ -2,7 +2,7 @@ extends Line2D
 
 var velocties: PackedVector2Array
 
-var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
+var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity") / 10
 
 
 func _ready() -> void:
@@ -17,8 +17,9 @@ func setEndHook( position: Vector2 ):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	for i in range(points.size()):
-		if i > 0 and i != points.size()-1:
-			velocties[i] += ( points[i-1] - points[i] ).normalized() * get_meta("Tension")
-			velocties[i] += ( points[i+1] - points[i] ).normalized() * get_meta("Tension")
+		if i > 0 and i < points.size()-1:
+			velocties[i] += ( points[i-1] - points[i] ) * get_meta("Tension")
+			velocties[i] += ( points[i+1] - points[i] ) * get_meta("Tension")
 			velocties[i] *= get_meta("Damp")
 			points[i] += velocties[i] * delta
+			points[i].y += gravity * delta
