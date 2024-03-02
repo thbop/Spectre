@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://chwl3c0gbx2r1"]
+[gd_scene load_steps=13 format=3 uid="uid://chwl3c0gbx2r1"]
 
 [ext_resource type="PackedScene" uid="uid://b64x3dtmmywch" path="res://Assets/Jeff.tscn" id="1_3236o"]
 [ext_resource type="PackedScene" uid="uid://gf7xw0uk4tfo" path="res://Assets/Angel.tscn" id="3_38mhs"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cgjedo6cvph8l" path="res://Assets/Graphics/Tiles/tiles0.png" id="4_pkj31"]
 [ext_resource type="Texture2D" uid="uid://dgeq5sqyamdbe" path="res://Assets/Graphics/Sketches/sky.png" id="5_5pj34"]
 [ext_resource type="PackedScene" uid="uid://b83imlskdrgla" path="res://Assets/Decos/LayerDeco.tscn" id="5_fdum5"]
+[ext_resource type="Texture2D" uid="uid://basmmdd4wjbll" path="res://Assets/Graphics/Decos/brush.png" id="8_plg38"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f6kr2"]
 texture = ExtResource("4_pkj31")
@@ -102,5 +103,14 @@ metadata/DecoName = "tree2"
 [node name="tree2" parent="ParallaxBackground" instance=ExtResource("5_fdum5")]
 position = Vector2(1285, 286)
 
-[node name="LayerDeco" parent="ParallaxBackground" instance=ExtResource("5_fdum5")]
+[node name="tree3" parent="ParallaxBackground" instance=ExtResource("5_fdum5")]
 position = Vector2(17, 233)
+
+[node name="brush" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-142, 512)
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1600, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/brush"]
+scale = Vector2(5, 5)
+texture = ExtResource("8_plg38")
