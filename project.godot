@@ -20,6 +20,12 @@ config/icon="res://icon.png"
 
 window/size/resizable=false
 
+[layer_names]
+
+2d_physics/layer_1="Tiles"
+2d_physics/layer_2="Actors"
+2d_physics/layer_3="Machines"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

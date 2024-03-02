@@ -123,7 +123,7 @@ position = Vector2(855, 448)
 position = Vector2(250, 504)
 scale = Vector2(2.65084, 2.65084)
 
-[node name="Angel" parent="Actors" groups=["JeffSwitch"] instance=ExtResource("3_38mhs")]
+[node name="Angel" parent="Actors" instance=ExtResource("3_38mhs")]
 position = Vector2(533, 340)
 scale = Vector2(1.72825, 1.75908)
 

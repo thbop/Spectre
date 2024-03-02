@@ -52,8 +52,9 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Angel" type="CharacterBody2D"]
-collision_layer = 2
+[node name="Angel" type="CharacterBody2D" groups=["JeffSwitch", "MachineSwitch"]]
+collision_layer = 6
+collision_mask = 2
 script = ExtResource("1_hnirh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
