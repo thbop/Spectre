@@ -7,3 +7,7 @@ res://Assets/Decos/LayerDeco.tscn
 res://Assets/Scripts/Decos/LayerDeco.gd
 res://Assets/Scripts/Jeff.gd
 res://Assets/Scripts/Angel/Angel.gd
+res://Assets/Elevator.tscn
+res://Assets/Scripts/Machines/Elevator.gd
+res://Assets/Scripts/Camera2D.gd
+res://Assets/Scripts/Machines/Rope.gd

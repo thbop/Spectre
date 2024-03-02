@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbrau1m54ahsm"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Machines/Elevator.gd" id="1_5qr87"]
+[ext_resource type="Texture2D" uid="uid://5h46843mqfhy" path="res://Assets/Graphics/Machines/elevatorFloor.png" id="1_brs71"]
+[ext_resource type="Texture2D" uid="uid://c0xiohx71m2d1" path="res://Assets/Graphics/Machines/elevatorWheel.png" id="2_ggvfm"]
+[ext_resource type="Texture2D" uid="uid://cpjnfj4gv5ihq" path="res://Assets/Graphics/Machines/rope.png" id="3_pcgad"]
+[ext_resource type="Script" path="res://Assets/Scripts/Machines/Rope.gd" id="3_sawb3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7rjn"]
+size = Vector2(16.8, 5)
+
+[node name="Elevator" type="Node2D"]
+script = ExtResource("1_5qr87")
+
+[node name="Rope" type="Line2D" parent="."]
+points = PackedVector2Array(-25, 96, -26, 41, -26, -7, -16, -22, 3, -26, 20, -21, 25, -8, 28, 68)
+width = 5.0
+texture = ExtResource("3_pcgad")
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("3_sawb3")
+metadata/Tension = 10.0
+metadata/Damp = 0.9
+
+[node name="Floor" type="RigidBody2D" parent="."]
+position = Vector2(-27, 108)
+mass = 0.26
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_a7rjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+scale = Vector2(5, 5)
+texture = ExtResource("1_brs71")
+
+[node name="Wheel" type="Sprite2D" parent="."]
+position = Vector2(1.19209e-07, -7.62939e-06)
+scale = Vector2(5, 5)
+texture = ExtResource("2_ggvfm")

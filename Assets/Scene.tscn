@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://chwl3c0gbx2r1"]
+[gd_scene load_steps=14 format=3 uid="uid://chwl3c0gbx2r1"]
 
 [ext_resource type="PackedScene" uid="uid://b64x3dtmmywch" path="res://Assets/Jeff.tscn" id="1_3236o"]
 [ext_resource type="PackedScene" uid="uid://gf7xw0uk4tfo" path="res://Assets/Angel.tscn" id="3_38mhs"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Assets/Scripts/Camera2D.gd" id="4_i6t0c"]
 [ext_resource type="Texture2D" uid="uid://cgjedo6cvph8l" path="res://Assets/Graphics/Tiles/tiles0.png" id="4_pkj31"]
 [ext_resource type="Texture2D" uid="uid://dgeq5sqyamdbe" path="res://Assets/Graphics/Sketches/sky.png" id="5_5pj34"]
+[ext_resource type="PackedScene" uid="uid://dbrau1m54ahsm" path="res://Assets/Elevator.tscn" id="5_a4rus"]
 [ext_resource type="PackedScene" uid="uid://b83imlskdrgla" path="res://Assets/Decos/LayerDeco.tscn" id="5_fdum5"]
 [ext_resource type="Texture2D" uid="uid://basmmdd4wjbll" path="res://Assets/Graphics/Decos/brush.png" id="8_plg38"]
 
@@ -58,24 +59,33 @@ sources/0 = SubResource("TileSetAtlasSource_q272p")
 
 [node name="Scene" type="Node2D"]
 
-[node name="BackgroundTiles" type="TileMap" parent="."]
+[node name="Tiles" type="Node2D" parent="."]
+
+[node name="BackgroundTiles" type="TileMap" parent="Tiles"]
 scale = Vector2(5, 5)
 tile_set = SubResource("TileSet_uwbp6")
 format = 2
 layer_0/tile_data = PackedInt32Array(720913, 0, 1, 655377, 0, 2, 589841, 0, 1, 524305, 0, 2, 458769, 0, 2, 393233, 0, 0, 786449, 0, 2, 393234, 65536, 0, 393235, 131072, 0, 393236, 196608, 0, 720917, 262144, 1, 786453, 262144, 2, 589845, 262144, 1, 655381, 262144, 2, 458773, 262144, 1, 524309, 262144, 2, 393237, 262144, 0, 458771, 131072, 1, 524307, 131072, 2, 458772, 196608, 1, 524308, 196608, 2, 655378, 131072, 1, 720914, 131072, 2, 655379, 196608, 1, 720915, 196608, 2, 720916, 65536, 1, 786452, 65536, 2, 589844, 65536, 1, 655380, 65536, 2, 524306, 65536, 2, 589842, 65536, 2, 458770, 65536, 1, 589843, 65536, 2, 786451, 65536, 2, 786450, 65536, 2)
 
-[node name="Tiles" type="TileMap" parent="."]
+[node name="ForegroundTiles" type="TileMap" parent="Tiles"]
 scale = Vector2(5, 5)
 tile_set = SubResource("TileSet_4mull")
 format = 2
 layer_0/tile_data = PackedInt32Array(655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 720899, 65536, 1, 720900, 0, 0, 720901, 0, 0, 720902, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 0, 720906, 0, 0, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 0, 720914, 0, 0, 720915, 0, 0, 720916, 0, 0, 720917, 0, 0, 720918, 0, 0, 720919, 0, 0, 720920, 0, 0, 720921, 0, 0, 720922, 0, 0, 720923, 0, 0, 720924, 0, 0, 720925, 0, 0, 720926, 0, 0, 720927, 0, 0, 720928, 0, 0, 720929, 0, 0, 720930, 0, 0, 720931, 0, 0, 720932, 0, 0, 720933, 0, 0, 720934, 0, 0, 720935, 0, 0, 720896, 0, 1, 720897, 0, 1, 720898, 0, 1, 786434, 0, 1, 786433, 0, 1, 786432, 0, 1, 786435, 0, 1, 786436, 0, 1, 786437, 0, 1, 786438, 0, 1, 786439, 0, 1, 786440, 0, 1, 786441, 0, 1, 786442, 0, 1, 786443, 0, 1, 786444, 0, 1, 786445, 0, 1, 786446, 0, 1, 786447, 0, 1, 786448, 0, 1, 786449, 0, 1, 786450, 0, 1, 786451, 0, 1, 786452, 0, 1, 786453, 0, 1, 786454, 0, 1, 786455, 0, 1, 786456, 0, 1, 786457, 0, 1, 786458, 0, 1, 786459, 0, 1, 786460, 0, 1, 786461, 0, 1, 786462, 0, 1, 786463, 0, 1, 786464, 0, 1, 786465, 0, 1, 786466, 0, 1, 786467, 0, 1, 786468, 0, 1, 786469, 0, 1, 786470, 0, 1, 786471, 0, 1, 655363, 65536, 0)
 
-[node name="Jeff" parent="." instance=ExtResource("1_3236o")]
-position = Vector2(296, 488)
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="Elevator" parent="Objects" instance=ExtResource("5_a4rus")]
+position = Vector2(425, 365)
+
+[node name="Actors" type="Node2D" parent="."]
+
+[node name="Jeff" parent="Actors" instance=ExtResource("1_3236o")]
+position = Vector2(250, 504)
 scale = Vector2(2.65084, 2.65084)
 
-[node name="Angel" parent="." instance=ExtResource("3_38mhs")]
-position = Vector2(579, 324)
+[node name="Angel" parent="Actors" instance=ExtResource("3_38mhs")]
+position = Vector2(533, 340)
 scale = Vector2(1.72825, 1.75908)
 
 [node name="Camera2D" type="Camera2D" parent="."]

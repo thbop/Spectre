@@ -1,5 +1,5 @@
 extends Camera2D
-@onready var Angel = $"../Angel"
+@onready var Angel = $"../Actors/Angel"
 
 
 const SPEED: int = 3
