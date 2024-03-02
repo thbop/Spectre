@@ -11,3 +11,4 @@ res://Assets/Elevator.tscn
 res://Assets/Scripts/Machines/Elevator.gd
 res://Assets/Scripts/Camera2D.gd
 res://Assets/Scripts/Machines/Rope.gd
+res://Assets/Shaders/PostProcessing.gdshader

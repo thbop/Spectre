@@ -4,7 +4,5 @@ extends Node2D
 @onready var Wheel = $Wheel
 
 
-
-
 func _process(delta: float) -> void:
 	Rope.points[0] = Floor.position

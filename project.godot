@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Spectre"
+config/description="A game"
 run/main_scene="res://Assets/Scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/resizable=false
 
 [rendering]
 

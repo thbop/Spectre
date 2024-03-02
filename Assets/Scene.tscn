@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://chwl3c0gbx2r1"]
+[gd_scene load_steps=16 format=3 uid="uid://chwl3c0gbx2r1"]
 
 [ext_resource type="PackedScene" uid="uid://b64x3dtmmywch" path="res://Assets/Jeff.tscn" id="1_3236o"]
 [ext_resource type="PackedScene" uid="uid://gf7xw0uk4tfo" path="res://Assets/Angel.tscn" id="3_38mhs"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dgeq5sqyamdbe" path="res://Assets/Graphics/Sketches/sky.png" id="5_5pj34"]
 [ext_resource type="PackedScene" uid="uid://dbrau1m54ahsm" path="res://Assets/Elevator.tscn" id="5_a4rus"]
 [ext_resource type="PackedScene" uid="uid://b83imlskdrgla" path="res://Assets/Decos/LayerDeco.tscn" id="5_fdum5"]
+[ext_resource type="Shader" path="res://Assets/Shaders/PostProcessing.gdshader" id="7_38nn1"]
 [ext_resource type="Texture2D" uid="uid://basmmdd4wjbll" path="res://Assets/Graphics/Decos/brush.png" id="8_plg38"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f6kr2"]
@@ -56,6 +57,9 @@ texture_region_size = Vector2i(10, 10)
 tile_size = Vector2i(10, 10)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_q272p")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_51ym8"]
+shader = ExtResource("7_38nn1")
 
 [node name="Scene" type="Node2D"]
 
@@ -124,3 +128,15 @@ motion_mirroring = Vector2(1600, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/brush"]
 scale = Vector2(5, 5)
 texture = ExtResource("8_plg38")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PostProcess" type="ColorRect" parent="CanvasLayer"]
+visible = false
+material = SubResource("ShaderMaterial_51ym8")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.192157, 0.192157, 0.192157, 1)

@@ -10,6 +10,10 @@ func _ready() -> void:
 		velocties.append(Vector2.ZERO)
 
 
+func setEndHook( position: Vector2 ):
+	points[-1] = position
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	for i in range(points.size()):

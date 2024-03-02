@@ -2,12 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://csty3twiu1tfp" path="res://Assets/Graphics/Angel/sprites.png" id="1_718wx"]
 [ext_resource type="Script" path="res://Assets/Scripts/Angel/Angel.gd" id="1_hnirh"]
-[ext_resource type="Shader" path="res://Assets/Scripts/Angel/Angel.gdshader" id="2_kptju"]
+[ext_resource type="Shader" path="res://Assets/Shaders/Angel.gdshader" id="2_r2akc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jrspu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h118w"]
-shader = ExtResource("2_kptju")
+shader = ExtResource("2_r2akc")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gavud"]
 atlas = ExtResource("1_718wx")
