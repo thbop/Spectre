@@ -10,6 +10,8 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+var lastPosition: Vector2 = Vector2.ZERO
+var realVelocity: Vector2 = Vector2.ZERO
 
 func _physics_process(delta: float) -> void:
 		
@@ -22,7 +24,10 @@ func _physics_process(delta: float) -> void:
 	if lastCollision:
 		var dirX: float = lastCollision.get_normal().x
 		if dirX and lastCollision.get_collider().is_in_group("JeffSwitch"):
-			velocity.x = SPEED * dirX
+			if realVelocity.x:
+				velocity.x = 0
+			else:
+				velocity.x = SPEED * dirX
 	
 	if velocity.x != 0:
 		Animator.animation = "walk"
@@ -33,5 +38,6 @@ func _physics_process(delta: float) -> void:
 	
 	Animator.play()
 	move_and_slide()
-
+	realVelocity = position - lastPosition
+	lastPosition = position
 
