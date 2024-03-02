@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 	var lastCollision: KinematicCollision2D = get_last_slide_collision()
 	if lastCollision:
 		var dirX: float = lastCollision.get_normal().x
-		if dirX:
+		if dirX and lastCollision.get_collider().is_in_group("JeffSwitch"):
 			velocity.x = SPEED * dirX
 	
 	if velocity.x != 0:
