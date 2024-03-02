@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://cywsc2hwbitw4"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Machines/Puller.gd" id="1_qdweq"]
+[ext_resource type="Texture2D" uid="uid://b8hw7438ut7hf" path="res://Assets/Graphics/Machines/Puller/base.png" id="1_rljxy"]
+[ext_resource type="Texture2D" uid="uid://bdn8kib2elc6g" path="res://Assets/Graphics/Machines/Puller/wheel0.png" id="2_dfi13"]
+[ext_resource type="Texture2D" uid="uid://q4jailo8ifga" path="res://Assets/Graphics/Machines/Puller/wheel1.png" id="3_5ks7j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6bnl"]
+size = Vector2(106, 70)
+
+[node name="Puller" type="StaticBody2D"]
+script = ExtResource("1_qdweq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_v6bnl")
+
+[node name="Base" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_rljxy")
+
+[node name="Wheel0" type="Sprite2D" parent="."]
+position = Vector2(-13, -2)
+scale = Vector2(5, 5)
+texture = ExtResource("2_dfi13")
+
+[node name="Wheel1" type="Sprite2D" parent="."]
+position = Vector2(27, 8)
+scale = Vector2(5, 5)
+texture = ExtResource("3_5ks7j")

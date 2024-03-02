@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://chwl3c0gbx2r1"]
+[gd_scene load_steps=16 format=3 uid="uid://chwl3c0gbx2r1"]
 
 [ext_resource type="PackedScene" uid="uid://b64x3dtmmywch" path="res://Assets/Jeff.tscn" id="1_3236o"]
 [ext_resource type="PackedScene" uid="uid://gf7xw0uk4tfo" path="res://Assets/Angel.tscn" id="3_38mhs"]
@@ -6,9 +6,10 @@
 [ext_resource type="Script" path="res://Assets/Scripts/Camera2D.gd" id="4_i6t0c"]
 [ext_resource type="Texture2D" uid="uid://cgjedo6cvph8l" path="res://Assets/Graphics/Tiles/tiles0.png" id="4_pkj31"]
 [ext_resource type="Texture2D" uid="uid://dgeq5sqyamdbe" path="res://Assets/Graphics/Sketches/sky.png" id="5_5pj34"]
-[ext_resource type="PackedScene" uid="uid://dbrau1m54ahsm" path="res://Assets/Elevator.tscn" id="5_a4rus"]
+[ext_resource type="PackedScene" uid="uid://dbrau1m54ahsm" path="res://Assets/Machines/Elevator.tscn" id="5_a4rus"]
 [ext_resource type="PackedScene" uid="uid://b83imlskdrgla" path="res://Assets/Decos/LayerDeco.tscn" id="5_fdum5"]
 [ext_resource type="Shader" path="res://Assets/Shaders/PostProcessing.gdshader" id="7_38nn1"]
+[ext_resource type="Texture2D" uid="uid://ck2abfqq1d8lh" path="res://Assets/Graphics/Machines/crane.png" id="11_3mxlt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f6kr2"]
 texture = ExtResource("4_pkj31")
@@ -108,8 +109,13 @@ layer_0/tile_data = PackedInt32Array(786434, 65537, 0, 851970, 65537, 1, 786435,
 
 [node name="Objects" type="Node2D" parent="."]
 
+[node name="Crane" type="Sprite2D" parent="Objects"]
+position = Vector2(1444, 272)
+scale = Vector2(5, 5)
+texture = ExtResource("11_3mxlt")
+
 [node name="Elevator" parent="Objects" instance=ExtResource("5_a4rus")]
-position = Vector2(881, 447)
+position = Vector2(855, 448)
 
 [node name="Actors" type="Node2D" parent="."]
 

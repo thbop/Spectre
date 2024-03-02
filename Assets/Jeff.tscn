@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bnw8p4h1p7kcv" path="res://Assets/Graphics/Jeff/walk.png" id="3_0a1l0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1cfi7"]
-radius = 2.5
-height = 25.0
+radius = 3.5
+height = 26.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ldma"]
 atlas = ExtResource("2_bi0pu")
@@ -117,7 +117,7 @@ collision_mask = 3
 script = ExtResource("1_0q5bj")
 
 [node name="Shape" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 0.5)
+position = Vector2(1, 0)
 shape = SubResource("CapsuleShape2D_1cfi7")
 
 [node name="Animator" type="AnimatedSprite2D" parent="."]

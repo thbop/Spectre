@@ -7,3 +7,6 @@ res://Assets/Scripts/Machines/Rope.gd
 res://Assets/Scripts/Machines/Elevator.gd
 res://Assets/Misc/Rope.tscn
 res://Assets/Scripts/Jeff.gd
+res://Assets/Machines/Puller.tscn
+res://Assets/Scripts/Machines/Puller.gd
+res://Assets/Machines/Elevator.tscn

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbrau1m54ahsm"]
+[gd_scene load_steps=6 format=3 uid="uid://dbrau1m54ahsm"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Machines/Elevator.gd" id="1_5qr87"]
 [ext_resource type="Texture2D" uid="uid://5h46843mqfhy" path="res://Assets/Graphics/Machines/elevatorFloor.png" id="1_brs71"]
 [ext_resource type="PackedScene" uid="uid://p8xnpjbnt6rl" path="res://Assets/Misc/Rope.tscn" id="2_kwhul"]
+[ext_resource type="PackedScene" uid="uid://cywsc2hwbitw4" path="res://Assets/Machines/Puller.tscn" id="4_gkek8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a7rjn"]
 size = Vector2(16.8, 4.9)
@@ -11,10 +12,9 @@ size = Vector2(16.8, 4.9)
 script = ExtResource("1_5qr87")
 
 [node name="Rope" parent="." instance=ExtResource("2_kwhul")]
-points = PackedVector2Array(-0.999969, 1, -5.6012, 22.7672, -9.00974, 38.8922, -12.5408, 55.5971, -16.2529, 73.1579, -20.2471, 92.0535, -23.858, 109.136, -27, 124)
+points = PackedVector2Array(-0.999969, -170, -1, 1)
 
 [node name="Floor" type="CharacterBody2D" parent="."]
-position = Vector2(-27, 124)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 position = Vector2(0, 0.25)
@@ -24,3 +24,6 @@ shape = SubResource("RectangleShape2D_a7rjn")
 [node name="Sprite2D" type="Sprite2D" parent="Floor"]
 scale = Vector2(5, 5)
 texture = ExtResource("1_brs71")
+
+[node name="Puller" parent="." instance=ExtResource("4_gkek8")]
+position = Vector2(2, -170)

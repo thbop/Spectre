@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byyafw0toknfk"
-path="res://.godot/imported/puller.png-47664f0982e62c557062e44e26fce21d.ctex"
+uid="uid://q4jailo8ifga"
+path="res://.godot/imported/wheel1.png-030085b6907c1e98eb0f97f90c843b95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/Machines/puller.png"
-dest_files=["res://.godot/imported/puller.png-47664f0982e62c557062e44e26fce21d.ctex"]
+source_file="res://Assets/Graphics/Machines/Puller/wheel1.png"
+dest_files=["res://.godot/imported/wheel1.png-030085b6907c1e98eb0f97f90c843b95.ctex"]
 
 [params]
 
