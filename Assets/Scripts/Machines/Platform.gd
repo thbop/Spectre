@@ -8,7 +8,7 @@ var hitBottom: bool = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var collision = move_and_collide( velocity * delta, false )
+	var collision = move_and_collide( velocity * delta )
 	
 	if collision:
 		var collisionNormal: Vector2 = collision.get_normal()
@@ -20,4 +20,5 @@ func _process(delta: float) -> void:
 	
 	if not hitBottom:
 		velocity.y += gravity * delta
+	
 	
