@@ -1,19 +1,17 @@
 extends Node2D
 @onready var Puller = $Puller
 @onready var Rope = $Rope
-@onready var Floor = $Floor
+@onready var Platform = $Platform
 
-var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
-const UPSPEED: int = -1400
+func _ready() -> void:
+	Puller.position.y -= get_meta("PullerYOffset") * 5
 
 func _process(delta: float) -> void:
-	if not (Floor.is_on_floor() and Puller.pulling ):
-		Floor.velocity.y += gravity * delta
+	
 	
 	if Puller.pulling:
-		Floor.velocity.y = UPSPEED
-	
-	Floor.move_and_slide()
+		Platform.velocity.y = Platform.UPSPEED
+
 	
 	Rope.points[0] = Puller.position
-	Rope.points[-1] = Floor.position
+	Rope.points[-1] = Platform.position

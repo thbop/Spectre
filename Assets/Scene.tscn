@@ -115,12 +115,13 @@ scale = Vector2(5, 5)
 texture = ExtResource("11_3mxlt")
 
 [node name="Elevator" parent="Objects" instance=ExtResource("5_a4rus")]
-position = Vector2(855, 448)
+position = Vector2(855, 572)
+metadata/PullerYOffset = 40.0
 
 [node name="Actors" type="Node2D" parent="."]
 
 [node name="Jeff" parent="Actors" instance=ExtResource("1_3236o")]
-position = Vector2(250, 504)
+position = Vector2(845, 521)
 scale = Vector2(2.65084, 2.65084)
 
 [node name="Angel" parent="Actors" instance=ExtResource("3_38mhs")]

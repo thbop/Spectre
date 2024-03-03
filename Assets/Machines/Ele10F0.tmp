@@ -11,12 +11,11 @@ size = Vector2(16.8, 4.9)
 
 [node name="Elevator" type="Node2D"]
 script = ExtResource("1_5qr87")
-metadata/PullerYOffset = 0.0
 
 [node name="Rope" parent="." instance=ExtResource("2_kwhul")]
 points = PackedVector2Array(-0.999969, -170, -0.758881, -141.064, -0.508316, -111, -0.258347, -81.002, 0, -50, -1, -20.4261, -1, 1)
 
-[node name="Platform" type="CharacterBody2D" parent="."]
+[node name="Platform" type="StaticBody2D" parent="."]
 collision_layer = 2
 collision_mask = 9
 script = ExtResource("3_cf20n")
