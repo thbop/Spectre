@@ -40,4 +40,3 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	realVelocity = position - lastPosition
 	lastPosition = position
-
