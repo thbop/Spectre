@@ -6,3 +6,4 @@ res://Assets/Machines/Elevator.tscn
 res://Assets/Machines/Puller.tscn
 res://Assets/Scripts/Machines/Platform.gd
 res://Assets/Scripts/Jeff.gd
+res://Assets/Scripts/Angel/Angel.gd
