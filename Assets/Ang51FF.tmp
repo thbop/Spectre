@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://gf7xw0uk4tfo"]
+[gd_scene load_steps=13 format=3 uid="uid://gf7xw0uk4tfo"]
 
 [ext_resource type="Texture2D" uid="uid://csty3twiu1tfp" path="res://Assets/Graphics/Angel/sprites.png" id="1_718wx"]
 [ext_resource type="Script" path="res://Assets/Scripts/Angel/Angel.gd" id="1_hnirh"]
 [ext_resource type="Shader" path="res://Assets/Shaders/Angel.gdshader" id="2_r2akc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jrspu"]
-radius = 2.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h118w"]
 shader = ExtResource("2_r2akc")
@@ -53,8 +52,12 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_flmhv"]
+radius = 64.7765
+
 [node name="Angel" type="CharacterBody2D" groups=["JeffSwitch", "MachineSwitch"]]
-collision_layer = 4
+collision_layer = 6
+collision_mask = 3
 script = ExtResource("1_hnirh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -66,3 +69,8 @@ position = Vector2(1.19209e-07, 5)
 scale = Vector2(2.66667, 2.66667)
 sprite_frames = SubResource("SpriteFrames_m5rxi")
 frame_progress = 0.191343
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_flmhv")

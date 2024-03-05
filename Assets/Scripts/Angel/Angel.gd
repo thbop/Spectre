@@ -13,7 +13,7 @@ func _physics_process(_delta: float) -> void:
 	var toMouse: Vector2 = ( get_global_mouse_position() - position ).normalized()
 	var toMouseRot: float = atan2( toMouse.y, toMouse.x )
 	var toMouseDis: float = position.distance_to( get_global_mouse_position() )
-
+	
 	
 	velocity = toMouse * SPEED * log( toMouseDis )
 	Animator.scale.y = max( BASESCALE * (realVelocity.length() / 8), BASESCALE )
@@ -21,10 +21,9 @@ func _physics_process(_delta: float) -> void:
 	
 	rotation = ( toMouseRot + 1.57075 )
 	
-
-		
 	
 	Animator.play()
 	move_and_slide()
+
 	realVelocity = position - lastPosition
 	lastPosition = position
