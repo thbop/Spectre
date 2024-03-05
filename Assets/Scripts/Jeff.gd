@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var Animator = $Animator
 @onready var Angel = $"../Angel"
 
+signal in_field
 
 const SPEED = 100.0
 const JUMP_VELOCITY = -400.0
@@ -28,10 +29,10 @@ func _physics_process(delta: float) -> void:
 	if not tapCooldown and ( position.distance_to(Angel.position) < 200 ):
 		if realVelocity.x:
 			velocity.x = 0
-			tapCooldown = 120
 		else:
 			velocity.x = SPEED * dirX
-			tapCooldown = 120
+		emit_signal("in_field")
+		tapCooldown = 120
 	
 	if tapCooldown:
 		tapCooldown -= 1

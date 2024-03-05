@@ -1,3 +1,5 @@
+CPUParticles2D
+GPUParticles2D
 CollisionShape2D
 StaticBody2D
 Node2D
@@ -10,5 +12,3 @@ AnimatedSprite2D
 ColorRect
 CanvasLayer
 Line2D
-RigidBody2D
-ParallaxLayer
