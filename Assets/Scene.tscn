@@ -121,7 +121,7 @@ texture_region_size = Vector2i(9, 9)
 5:3/0 = 0
 5:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:3/0/physics_layer_0/angular_velocity = 0.0
-5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.5, -3.625, 4.5, -3.5625, 4.5, 3.4375, -4.5, 1.375)
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.5, -3.625, 4.5, -4.5, 4.5, 3.4375, -4.5, 1.375)
 4:3/0 = 0
 4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:3/0/physics_layer_0/angular_velocity = 0.0
@@ -174,7 +174,7 @@ metadata/PullerYOffset = 40.0
 [node name="Actors" type="Node2D" parent="."]
 
 [node name="Jeff" parent="Actors" instance=ExtResource("1_3236o")]
-position = Vector2(176, 504)
+position = Vector2(994, 366)
 scale = Vector2(2.65084, 2.65084)
 
 [node name="Angel" parent="Actors" instance=ExtResource("3_38mhs")]

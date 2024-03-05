@@ -24,7 +24,14 @@ func _physics_process(delta: float) -> void:
 		velocity.y += gravity * delta
 	
 	
-	var lastCollision: KinematicCollision2D = get_last_slide_collision()
+	var dirX: int = sign((Angel.position - position).x)
+	if not tapCooldown and ( position.distance_to(Angel.position) < 200 ):
+		if realVelocity.x:
+			velocity.x = 0
+			tapCooldown = 120
+		else:
+			velocity.x = SPEED * dirX
+			tapCooldown = 120
 	
 	if tapCooldown:
 		tapCooldown -= 1
@@ -41,13 +48,3 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	realVelocity = position - lastPosition
 	lastPosition = position
-
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	var dirX: int = sign((Angel.position - position).x)
-	if ( position.distance_to(Angel.position) < 200 ):
-		if realVelocity.x:
-			velocity.x = 0
-		else:
-			velocity.x = SPEED * dirX
-			tapCooldown = 5
