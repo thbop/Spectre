@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cywsc2hwbitw4"]
+[gd_scene load_steps=7 format=3 uid="uid://cywsc2hwbitw4"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Machines/Puller.gd" id="1_qdweq"]
 [ext_resource type="Texture2D" uid="uid://b8hw7438ut7hf" path="res://Assets/Graphics/Machines/Puller/base.png" id="1_rljxy"]
 [ext_resource type="Texture2D" uid="uid://bdn8kib2elc6g" path="res://Assets/Graphics/Machines/Puller/wheel0.png" id="2_dfi13"]
 [ext_resource type="Texture2D" uid="uid://q4jailo8ifga" path="res://Assets/Graphics/Machines/Puller/wheel1.png" id="3_5ks7j"]
+[ext_resource type="AudioStream" uid="uid://cwsbpfxwxj3mp" path="res://Assets/Audio/Motor.wav" id="5_cpru2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6bnl"]
 size = Vector2(106, 70)
@@ -30,3 +31,7 @@ texture = ExtResource("2_dfi13")
 position = Vector2(27, 8)
 scale = Vector2(5, 5)
 texture = ExtResource("3_5ks7j")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_cpru2")
+volume_db = -8.955

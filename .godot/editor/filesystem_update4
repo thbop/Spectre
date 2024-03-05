@@ -7,3 +7,4 @@ res://Assets/Scripts/Angel/Angel.gd
 res://Assets/Machines/Elevator.tscn
 res://Assets/Machines/Puller.tscn
 res://Assets/Scripts/Camera2D.gd
+res://Assets/Scripts/Machines/Puller.gd

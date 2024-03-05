@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://chwl3c0gbx2r1"]
+[gd_scene load_steps=19 format=3 uid="uid://chwl3c0gbx2r1"]
 
 [ext_resource type="PackedScene" uid="uid://b64x3dtmmywch" path="res://Assets/Jeff.tscn" id="1_3236o"]
 [ext_resource type="PackedScene" uid="uid://gf7xw0uk4tfo" path="res://Assets/Angel.tscn" id="3_38mhs"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b83imlskdrgla" path="res://Assets/Decos/LayerDeco.tscn" id="5_fdum5"]
 [ext_resource type="Shader" path="res://Assets/Shaders/PostProcessing.gdshader" id="7_38nn1"]
 [ext_resource type="Texture2D" uid="uid://ck2abfqq1d8lh" path="res://Assets/Graphics/Machines/crane.png" id="11_3mxlt"]
+[ext_resource type="AudioStream" uid="uid://b0agodq6hs5nh" path="res://Assets/Audio/Noise.wav" id="11_8hxe4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f6kr2"]
 texture = ExtResource("4_pkj31")
@@ -222,5 +223,9 @@ shape = SubResource("WorldBoundaryShape2D_yxa5c")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Bounds/bound"]
 shape = SubResource("WorldBoundaryShape2D_k2a6v")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_8hxe4")
+autoplay = true
 
 [connection signal="in_field" from="Actors/Jeff" to="Actors/Angel" method="_on_jeff_in_field"]
